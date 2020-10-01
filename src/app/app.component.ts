@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , TemplateRef, Input,ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  name :string;
+  
   
   /* An empty array that is responsible 
        to add a division */
@@ -33,4 +35,13 @@ export class AppComponent {
     public deleteTask(index) { 
         this.items.splice(index, 1); 
     } 
+
+    public editTask(index){
+        let name=this.items[index];
+        let message =prompt("Edit Task Title", name);
+        if (message !== null && message !== ""){
+            this.items[index] = message;
+          }
+
+    }
 }
