@@ -40,10 +40,15 @@
                     justify-content-center align-items-center 
                     text-light h3"> 
   
-            <div class="col-9 text-light h3">{{x}}</div> 
+            <div class="col-8 text-light h3">{{x}}</div> 
   
             <input (click)="deleteTask(index)" type="button"
                 value="Delete" class="col-2 btn btn-danger"> 
+
+       
+            <input (click)="editTask(index)" type="button"
+                value="Edit" class="col-2 btn btn-danger"> 
+
         </div> 
           
         <div class="col-3 d-none col-md-3 d-md-block"></div> 
